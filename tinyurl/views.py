@@ -9,6 +9,7 @@ class LinkView(CreateAPIView):
     """
     Widok służący do generowania krótkich linków dla podanych urli.
     """
+
     serializer_class = LinkSerializer
 
 

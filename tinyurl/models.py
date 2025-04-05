@@ -12,6 +12,7 @@ class Link(models.Model):
     ze względu na prostote rozwiązania. Ma ono swoje wady (użytkownik może domyśleć się, jakie są inne potencjalne
     skrócone urle i wejść na losowy). Alternatywnym rozwiązaniem jest np. użycie losowego, unikalnego ciągu znaków.
     """
+
     # TextField - skoro aplikacja ma służyć do skracania urli, to mogą być one potencjalnie bardzo długie - ograniczanie
     # długości przez użycie URLField wydaje się mijać z celem. Dodatkowo różne backendy bazodanowe mają różne
     # ograniczenia co do maksymalnej długości, więc maksymalny input użytkownika lepiej ograniczyć od strony API.
@@ -19,7 +20,9 @@ class Link(models.Model):
 
     @property
     def short_url(self):
-        return urljoin(settings.APPLICATION_HOST, reverse("link-resolution", kwargs={"pk": self.pk}))
+        return urljoin(
+            settings.APPLICATION_HOST, reverse("link-resolution", kwargs={"pk": self.pk})
+        )
 
     class Meta:
         verbose_name = _("link")

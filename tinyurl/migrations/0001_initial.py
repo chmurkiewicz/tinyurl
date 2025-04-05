@@ -7,19 +7,23 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Link',
+            name="Link",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('original_url', models.TextField(verbose_name='original url')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True, primary_key=True, serialize=False, verbose_name="ID"
+                    ),
+                ),
+                ("original_url", models.TextField(verbose_name="original url")),
             ],
             options={
-                'verbose_name': 'link',
-                'verbose_name_plural': 'links',
+                "verbose_name": "link",
+                "verbose_name_plural": "links",
             },
         ),
     ]
