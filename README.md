@@ -9,7 +9,7 @@ Projekt przygotowany jest na Python w wersji 3.13.2.
 1. Zainstaluj zależności:
 
 ```commandline
-pip install -r requirements.txt
+pip install -r requirements/requirements.txt
 ```
 
 ...lub całą aplikację:
@@ -52,3 +52,17 @@ Domyślna konfiguracja aplikacjji **nie jest** przystosowana do deployu. Minimal
 dokonane przed uruchomieniem produkcyjnym opisane są w dokumentacji Django:
 
 https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
+
+## Testy
+
+Aby uruchomić testy trzeba mieć zainstalowane zależności z pliku `requirements/requirements-tests.txt`:
+
+```commandline
+pip install -r requirements/requirements-tests.txt
+```
+
+Uruchomić testy pozwala komenda  `pytest`:
+
+```commandline
+pytest
+```

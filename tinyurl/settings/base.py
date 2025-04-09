@@ -91,7 +91,7 @@ STATIC_URL = oeg("TINYURL_STATIC_URL", "static/")
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Przedrostek używany do generowania skróconego url - powinien być taki sam jak host, na którym będzie stała aplikacja.
-# 'http://' nie jest wymagane.
+# Podane protokolu jest wymagane ze względu na użycie urllib.
 APPLICATION_HOST = oeg("TINYURL_APPLICATION_HOST", "http://localhost:8000")
 # Jak długie mogą być urle przesyłane przez użytkowników do skrócenia.
 MAX_URL_LENGTH = int(oeg("TINYURL_MAX_URL_LENGTH", "5000"))

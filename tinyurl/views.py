@@ -18,6 +18,8 @@ class LinkResolutionView(RedirectView):
     Widok służący do przekierowania użytkownika z krótkiego urla na kryjący się pod nim, oryginalny url.
     """
 
+    permanent = True
+
     def get_redirect_url(self, *args, **kwargs):
         link_obj = get_object_or_404(Link, pk=kwargs["pk"])
         return link_obj.original_url
